@@ -1,0 +1,12 @@
+library {{ prefix }};
+
+import 'package:flutter/widgets.dart' show IconData;
+
+class {{ name }} {
+  static const _fontFamily = '{{ name }}';
+  static const _fontPackage = '{{ prefix }}';
+
+  {{# each codepoints }}
+  static const IconData {{ @key }} = IconData(0x{{ codepoint this }}, fontFamily: _fontFamily, fontPackage: _fontPackage);
+  {{/ each }}
+}
