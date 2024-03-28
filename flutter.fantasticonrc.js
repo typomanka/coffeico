@@ -11,4 +11,5 @@ module.exports = {
   pathOptions: {
     css: "flutter/lib/coffeico.dart",
   },
+  getIconId: ({ basename }) => basename.substring(5),
 }
