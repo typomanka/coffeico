@@ -28,4 +28,8 @@ class Coffeico {
       IconData(0xf10a, fontFamily: _fontFamily, fontPackage: _fontPackage);
   static const IconData portafilter =
       IconData(0xf10b, fontFamily: _fontFamily, fontPackage: _fontPackage);
+  static const IconData bag =
+      IconData(0xf10c, fontFamily: _fontFamily, fontPackage: _fontPackage);
+  static const IconData bag_with_bean =
+      IconData(0xf10d, fontFamily: _fontFamily, fontPackage: _fontPackage);
 }

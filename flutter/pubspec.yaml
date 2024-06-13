@@ -1,11 +1,11 @@
 name: coffeico
 description: "Free icons for different coffee brewing methods"
-version: 0.1.0
+version: 0.2.0
 homepage: https://github.com/typomanka/coffeico
 repository: https://github.com/typomanka/coffeico
 
 environment:
-  sdk: '>=3.3.2 <4.0.0'
+  sdk: '>=3.4.3 <4.0.0'
   flutter: ">=1.17.0"
 
 dependencies:
