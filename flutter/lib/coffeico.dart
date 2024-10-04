@@ -32,4 +32,6 @@ class Coffeico {
       IconData(0xf10c, fontFamily: _fontFamily, fontPackage: _fontPackage);
   static const IconData bag_with_bean =
       IconData(0xf10d, fontFamily: _fontFamily, fontPackage: _fontPackage);
+  static const IconData hario_switch =
+      IconData(0xf10e, fontFamily: _fontFamily, fontPackage: _fontPackage);
 }

@@ -9,7 +9,7 @@ flutter create \
   --project-name "coffeico" \
   --description "Free icons for different coffee brewing methods" \
   flutter
-sed -i '' 's|version: 0.0.1|version: 0.2.0|' flutter/pubspec.yaml
+sed -i '' 's|version: 0.0.1|version: 0.3.0|' flutter/pubspec.yaml
 sed -i '' 's|homepage:|homepage: https://github.com/typomanka/coffeico\nrepository: https://github.com/typomanka/coffeico|' flutter/pubspec.yaml
 cat >> flutter/pubspec.yaml << EOF
   fonts:
