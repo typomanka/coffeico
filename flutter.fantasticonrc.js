@@ -2,7 +2,7 @@ const fs = require("fs")
 const path = require("path")
 
 module.exports = {
-  prefix: "coffeico",
+  prefix: "coffeico_plus",
   name: "Coffeico",
   inputDir: "./svg",
   outputDir: "./flutter/fonts",
@@ -21,7 +21,7 @@ module.exports = {
       return codepoints
     }, {}),
   pathOptions: {
-    css: "flutter/lib/coffeico.dart",
+    css: "flutter/lib/coffeico_plus.dart",
   },
   getIconId: ({ basename }) => basename.substring(5),
 }

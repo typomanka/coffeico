@@ -1,0 +1,52 @@
+name: Package checks
+
+on:
+  push:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - uses: subosito/flutter-action@v2
+        with:
+          flutter-version: 3.38.10
+          channel: stable
+          cache: true
+
+      - name: Resolve dependencies
+        working-directory: flutter
+        run: flutter pub get
+
+      - name: Verify generated artifacts
+        run: |
+          npm ci
+          npm run generate
+          dart format flutter/lib/coffeico_plus.dart
+          git diff --exit-code -- flutter/fonts/Coffeico.ttf flutter/lib/coffeico_plus.dart
+
+      - name: Check formatting
+        working-directory: flutter
+        run: dart format --output=none --set-exit-if-changed lib test example
+
+      - name: Analyze
+        working-directory: flutter
+        run: flutter analyze
+
+      - name: Test
+        working-directory: flutter
+        run: flutter test
+
+      - name: Validate package archive
+        working-directory: flutter
+        run: dart pub publish --dry-run

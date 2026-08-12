@@ -1,0 +1,13 @@
+{
+  "name": "coffeico-build",
+  "private": true,
+  "scripts": {
+    "generate": "npm run generate:font",
+    "generate:font": "fantasticon -c flutter.fantasticonrc.js",
+    "optimize:svg": "svgo svg"
+  },
+  "devDependencies": {
+    "fantasticon": "4.1.0",
+    "svgo": "4.0.2"
+  }
+}
